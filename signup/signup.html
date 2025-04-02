@@ -1,17 +1,40 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singup</title>
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <!--link met css styling file-->
+   
 </head>
 <body>
-    <nav>
-        <ul>
-            <button><a href="../login/login.html">Login</a></button>
-            <button><a href="../homepage/index.html">Home</a></button>
-            <li><a href="#">Signup</a></li>
-        </ul>
-    </nav>
+    <header>
+        <a class="login-button" href="../login/login.html">Login</a>
+    </header>
+   
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Sign Up</h1>
+                <input type="text" placeholder="Naam" required />
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Wachtwoord" required />
+                <input type="tel" placeholder="Telefoonnummer" required />
+                <button>Sign Up</button>
+            </form>
+        </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-</html>
+
+<!-- <nav>
+    <ul>
+        <button><a href="../login/login.html">Login</a></button>
+        <button><a href="../homepage/index.html">Home</a></button>
+        <li><a href="#">Signup</a></li>
+    </ul>
+</nav> -->
