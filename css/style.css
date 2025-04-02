@@ -1,0 +1,104 @@
+/* Algemene stijlen */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #E7D4AB; /* Lichtgele achtergrondkleur */
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Navigatiebalk */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #F5F5DC; /* Crème achtergrondkleur voor navbar */
+    color: black;
+    list-style: none;
+    width: 100%;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* Knoppen */
+button, .signup-button, .login-button {
+    background-color: #E7D4AB; /* Lichtgele achtergrondkleur */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+button:hover, .signup-button:hover, .login-button:hover {
+    background-color: #d6b98f; /* Donkerdere tint van lichtgeel bij hover */
+}
+
+.signup-button, .login-button {
+    background-color: #fff;
+    border: 2px solid black;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+/* Containers */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+/* Formulieren en invoervelden */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: #eee;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Typografie */
+h2 {
+    text-align: center;
+    color: #333; /* Donkergrijze tekstkleur */
+}
+
+a {
+    color: #333; /* Donkergrijze tekstkleur voor links */
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 7px;
+    margin-bottom: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
