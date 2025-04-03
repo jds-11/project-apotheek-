@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wachtwoord Vergeten</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="reset-container">
+        <h2>Wachtwoord Vergeten</h2>
+        <p>Voer je gebruikersnaam en nieuw wachtwoord in.</p>
+        <form action="/verwerk-wachtwoord-reset" method="POST">
+            <input type="text" placeholder="Gebruikersnaam" required>
+            <input type="password" placeholder="Nieuw Wachtwoord" required>
+            <button type="submit">Reset Wachtwoord</button>
+        </form>
+        <a href="/login/login.html" class="link">Terug naar inloggen</a>
+    </div>
+
+</body>
+
+</html>
