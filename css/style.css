@@ -102,3 +102,25 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.text-section {
+    flex: 1;
+}
+
+.image-placeholder {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.image-placeholder img {
+    max-width: 150px; /* Pas de grootte aan indien nodig */
+    height: auto;
+}
