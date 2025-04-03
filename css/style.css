@@ -124,3 +124,86 @@ a:hover {
     max-width: 150px; /* Pas de grootte aan indien nodig */
     height: auto;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc;
+    /* Crème achtergrondkleur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Volledige hoogte van het venster */
+    margin: 0;
+    /* Geen standaard marge */
+}
+
+.admincontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d6b98f;
+    /* Achtergrondkleur */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    /* Breedte van de container */
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    /* Ruimte onder de titel */
+}
+
+.order-item {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    /* Witte achtergrond voor bestellingen */
+    transition: box-shadow 0.3s;
+    /* Animatie voor hover effect */
+    width: 100%;
+    /* Volledige breedte van de container */
+}
+
+.order-item:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Schaduw bij hover */
+}
+
+button {
+    background-color: #d1c6a7;
+    /* Crème tint voor knoppen */
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    /* Ruimte tussen knoppen */
+    transition: background-color 0.3s;
+    /* Animatie voor hover effect */
+}
+
+button:hover {
+    background-color: #c3b09a;
+    /* Donkerder crème tint bij hover */
+}
+
+.link {
+    display: block;
+    margin-top: 20px;
+    /* Ruimte boven de link */
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+    /* Onderstreping bij hover */
+}
