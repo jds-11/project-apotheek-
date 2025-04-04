@@ -1,40 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl"> <!-- Changed language to Dutch -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apothecare</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="app.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apothecare - Online Apotheek</title> <!-- Updated title to Dutch -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> <!-- Font Awesome -->
 </head>
 <body>
-    <div id="app">
-        <nav>
-            <ul class="navbar">
-                <li><a href="#">about us</a></li>
-                <li><a href="#">proceduren</a></li>
-                <li><button class="login-btn"><a href="../login/login.html">login</a></button></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <h1 class="title">Apothecare</h1>
-            <div class="content">
-                <div class="text-section">
-                    <h2>Nieuws & Gezondheidstips</h2>
-                    <h3>Blijf Goed Gehydrateerd</h3>
-                    <p>
-                        Drink minstens 1,5 tot 2 liter water per dag om je lichaam goed te laten functioneren. 
-                        Voldoende vocht helpt bij de spijsvertering, energieniveau en huidgezondheid.
-                    </p>
-                    <p class="info">Gratis bezorgd 24/7 open overal bezorgd door Nederland</p>
-                </div>
-                <div class="image-placeholder">
-                    <img src="ChatGPT Image 2 apr 2025, 11_39_09.png" alt="Gezondheidstips" class="img-fluid">
-                </div>
-            </div>
-        </div>
+  <header>
+    <div class="container">
+      <nav>
+        <h1><a href="../homepage/index.html">Apothecare</a></h1>
+        <ul>
+          <li><a href="../medicijnen/medicijnen.html">Medicijnen</a></li> <!-- Updated to Dutch -->
+          <li><a href="#">Contact</a></li> <!-- Updated to Dutch -->
+          <li><a href="../about/overons.html">Over ons</a></li>
+          <li><a href="../login/login.html">Login</a></li>
+          <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!-- Shopping cart icon -->
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Uw Betrouwbare Online Apotheek</h2> <!-- Updated to Dutch -->
+      <p>Bestel eenvoudig en veilig medicijnen vanuit huis, afgesproken met een huisarts kunt u op voorschrifte medicijnen bestellen.</p> <!-- Updated to Dutch -->
+    </div>
+  </section>
+
+  <section class="featured">
+    <div class="container">
+      <h3>Populaire Medicijnen</h3> <!-- Updated to Dutch -->
+      <div class="product-grid">
+        <div class="product-card">
+          <h4>Paracetamol</h4>
+          <p>Verlicht pijn en koorts</p>
+          <p>Verschillende doses</p> <!-- Updated to Dutch -->
+          <button>Koop Nu</button> <!-- Updated to Dutch -->
+        </div>
+        <div class="product-card">
+          <h4>Ibuprofen</h4>
+          <p>Ontstekingsremmende pijnstiller</p>
+          <p>Verschillende doses</p> <!-- Updated to Dutch -->
+          <button>Koop Nu</button> <!-- Updated to Dutch -->
+        </div>
+        <div class="product-card">
+          <h4>Amoxicilline</h4>
+          <p>Antibioticum voor infecties</p>
+          <p>Verschillende doses</p> <!-- Updated to Dutch -->
+          <button>Koop Nu</button> <!-- Updated to Dutch -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PharmaCare. Alle rechten voorbehouden.</p> <!-- Updated to Dutch -->
+    </div>
+  </footer>
 </body>
 </html>

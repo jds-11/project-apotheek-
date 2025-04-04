@@ -3,12 +3,10 @@ require 'connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['query1'])) {
     try {
-        // Controleer of alle velden bestaan
         if (!isset($_POST['naam'], $_POST['email'], $_POST['wachtwoord'], $_POST['telefoonnummer'], $_POST['adres'])) {
             die("Fout: Niet alle vereiste velden zijn ingevuld.");
         }
-
-        // Verkrijg gegevens uit het formulier
+        
         $naam = $_POST['naam'];
         $email = $_POST['email'];
         $wachtwoord = $_POST['wachtwoord'];
