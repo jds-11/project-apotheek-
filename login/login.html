@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <!-- link naar css -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <header>
+    <!-- link naar signuo -->
     <a class="signup-button" href="../signup/signup.html">Sign Up</a>
 </header>
 <body>
+    <!-- als je ingelogd bent ga je naar de volgende pagina -->
     <div class="container" id="container">
         <div class="form-container sign-in-container">
             <form action="../php/login.php" method="POST">
                 <h1>Login</h1>
+                <!-- het veld dat ingevuld moet worden en required is -->
                 <input type="email" name="email" placeholder="Email" required />
                 <input type="password" name="wachtwoord" placeholder="Wachtwoord" required />
                 <button type="submit">Log in</button>
