@@ -5,7 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['query1'])) {
     try {
         // Controleer of alle velden bestaan
         if (!isset($_POST['naam'], $_POST['email'], $_POST['wachtwoord'], $_POST['telefoonnummer'], $_POST['adres'])) {
-            die("Fout: Niet alle vereiste velden zijn ingevuld.");
+            header("Location: ../signup/signup.php?error=velden");
+            exit;
         }
 
         // Verkrijg gegevens uit het formulier
@@ -15,10 +16,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['query1'])) {
         $telefoonnummer = $_POST['telefoonnummer'];
         $adres = $_POST['adres'];
 
-        // Hash het wachtwoord voor veiligheid
+        // ✅ Check of het e-mailadres geldig is
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            header("Location: ../signup/signup.php?error=email");
+            exit;
+        }
+
         $hashed_password = password_hash($wachtwoord, PASSWORD_DEFAULT);
 
-        // Debugging: Print de SQL-query (tijdelijk)
+        // Check of e-mail al bestaat
+        $checkEmail = $conn->prepare("SELECT * FROM users WHERE email = :email");
+        $checkEmail->execute([':email' => $email]);
+
+        if ($checkEmail->rowCount() > 0) {
+            header("Location: ../signup/signup.php?error=bestaat");
+            exit;
+        }
+
+        // Voeg gebruiker toe
         $sql = "INSERT INTO users (naam, email, wachtwoord, telefoonnummer, adres) 
                 VALUES (:naam, :email, :wachtwoord, :telefoonnummer, :adres)";
         
@@ -31,15 +46,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['query1'])) {
             ':adres' => $adres
         ]);
 
-        echo "✅ Gebruiker succesvol geregistreerd!";
-        header("Location: ../login/login.html"); // Optioneel: doorsturen naar login
+        header("Location: ../login/login.html");
         exit;
 
     } catch (PDOException $e) {
-        die("❌ Fout bij invoegen: " . $e->getMessage());
+        header("Location: ../signup/signup.php?error=sql");
+        exit;
     }
 }
 ?>
-
-
- 

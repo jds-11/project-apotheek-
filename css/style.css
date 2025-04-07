@@ -323,3 +323,12 @@ body {
     font-size: 0.9rem;
     color: #666;
   }
+
+  .error {
+    background-color: #ffe5e5;
+    color: #cc0000;
+    padding: 10px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
