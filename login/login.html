@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <!-- link naar css -->
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Apothecare</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> <!-- Font Awesome -->
 </head>
-<header>
-    <!-- link naar signuo -->
-    <a class="signup-button" href="../signup/signup.html">Sign Up</a>
-</header>
 <body>
-    <!-- als je ingelogd bent ga je naar de volgende pagina -->
-    <div class="container" id="container">
-        <div class="form-container sign-in-container">
-            <form action="../php/login.php" method="POST">
-                <h1>Login</h1>
-                <!-- het veld dat ingevuld moet worden en required is -->
-                <input type="email" name="email" placeholder="Email" required />
-                <input type="password" name="wachtwoord" placeholder="Wachtwoord" required />
-                <button type="submit">Log in</button>
-            </form>
-        </div>
+  <header>
+    <div class="container">
+        <nav>
+            <h1><a href="../homepage/index.html">Apothecare</a></h1>
+            <ul>
+              <li><a href="../medicijnen/medicijnen.html">Medicijnen</a></li> <!-- Updated to Dutch -->
+              <li><a href="#">Contact</a></li> <!-- Updated to Dutch -->
+              <li><a href="../about/overons.html">Over ons</a></li>
+              <li><a href="../login/login.html">Login</a></li>
+              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!-- Shopping cart icon -->
+            </ul>
+          </nav>
     </div>
-    <script src="script.js"></script>
+  </header>
+
+  <section class="login-form">
+    <div class="container">
+      <div class="form-container">
+        <form action="../php/login.php" method="POST">
+          <h3>Log in op uw account</h3>
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" name="wachtwoord" placeholder="Wachtwoord" required />
+          <button type="submit">Log in</button>
+        </form>
+        <p>Nog geen account? <a href="../signup/signup.html">Registreer hier</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PharmaCare. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
 </body>
 </html>
