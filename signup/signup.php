@@ -17,7 +17,7 @@
               <li><a href="#">Contact</a></li>
               <li><a href="../about/overons.html">Over ons</a></li>
               <li><a href="../login/login.html">Login</a></li>
-              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+              <!-- <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> -->
             </ul>
         </nav>
     </div>
