@@ -39,7 +39,7 @@ if (isset($_SESSION['error'])) {
                     header("Location: ../admin/AdminPanel.html");
                     exit;
                 } else {
-                    header("Location: ../medicijn/medicijnen.html");
+                    header("Location: ../medicijnen/Medicijnen.html");
                     exit;
                 }
             } else {
@@ -61,3 +61,4 @@ if (isset($_SESSION['error'])) {
     }
 }
 ?>
+
