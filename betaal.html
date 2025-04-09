@@ -11,6 +11,21 @@
 </head>
 
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1><a href="../homepage/index.html">Apothecare</a></h1>
+                <ul>
+                    <li><a href="../medicijnen/medicijnen.html">Medicijnen</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                    <li><a href="../about/overons.html">Over ons</a></li>
+                    <li><a href="../login/login.html">Login</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div id="app" class="container">
         <header class="text-center my-4">
             <h1>Afrekenen</h1>
@@ -18,7 +33,7 @@
 
         <section class="checkout">
             <h2>Vul uw gegevens in</h2>
-            <form @submit.prevent="submitorder">
+            <form @submit.prevent="submitOrder">
                 <div class="mb-3">
                     <label for="name" class="form-label">Naam</label>
                     <input type="text" id="name" v-model="name" class="form-control" required>
@@ -71,6 +86,7 @@
                     } else {
                         alert(`Bestelling bevestigd voor ${this.name}. Totaal: €${this.total.toFixed(2)}`);
                         localStorage.removeItem('cart'); // Leeg de winkelmand na de bestelling
+                        // Hier kan je eventueel verdergaande logica voor het verwerken van de bestelling toevoegen
                     }
                 }
             }
