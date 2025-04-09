@@ -39,16 +39,15 @@ if (isset($_SESSION['error'])) {
                     header("Location: ../admin/AdminPanel.html");
                     exit;
                 } else {
-                    header("Location: ../winkelmandje/winkelmandje.html");
+                    header("Location: ../medicijn/medicijnen.html");
                     exit;
                 }
             } else {
                 // Wachtwoord fout
                 $_SESSION['error'] = "❌ Ongeldig wachtwoord.";
                 header("Location: login.php");
-                exit;
-            }
-        } else {
+                exit;}} 
+                else {
             // Gebruiker niet gevonden
             $_SESSION['error'] = "❌ Geen account gevonden met dit e-mailadres.";
             header("Location: login.php");
