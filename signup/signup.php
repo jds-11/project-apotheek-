@@ -13,19 +13,47 @@
         <nav>
             <h1><a href="../homepage/index.html">Apothecare</a></h1>
             <ul>
-              <li><a href="../medicijnen/medicijnen.html">Medicijnen</a></li> <!-- Updated to Dutch -->
-              <li><a href="#">Contact</a></li> <!-- Updated to Dutch -->
+              <li><a href="../medicijnen/medicijnen.html">Medicijnen</a></li>
+              <li><a href="#">Contact</a></li>
               <li><a href="../about/overons.html">Over ons</a></li>
               <li><a href="../login/login.html">Login</a></li>
-              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!-- Shopping cart icon -->
+              <!-- <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> -->
             </ul>
-          </nav>
+        </nav>
     </div>
   </header>
+
   <section class="signup-form">
     <div class="container">
       <div class="form-container">
+
+        <!-- ⚠️ PHP-foutmelding weergeven -->
+        <?php
+        if (isset($_GET['error'])) {
+            echo '<div class="error">';
+            switch ($_GET['error']) {
+                case 'email':
+                    echo "❌ Ongeldig e-mailadres. Probeer opnieuw.";
+                    break;
+                case 'bestaat':
+                    echo "⚠️ Dit e-mailadres is al geregistreerd.";
+                    break;
+                case 'velden':
+                    echo "⚠️ Vul alle velden in.";
+                    break;
+                case 'sql':
+                    echo "❌ Er is een fout opgetreden. Probeer het later opnieuw.";
+                    break;
+                default:
+                    echo "⚠️ Onbekende fout.";
+            }
+            echo '</div>';
+        }
+        ?>
+
         <form action="../php/insert.php" method="POST">
+          <input type="hidden" name="query1" value="1">
+
           <h3>Maak een account aan</h3>
           <input type="text" name="naam" placeholder="Naam" required />
           <input type="email" name="email" placeholder="Email" required />
