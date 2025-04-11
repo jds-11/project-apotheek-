@@ -27,6 +27,7 @@ if (isset($_SESSION['error'])) {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user) {
+            // Controleer of het wachtwoord klopt
             // Controleer het wachtwoord
             if (password_verify($wachtwoord, $user['wachtwoord'])) {
                 // Zet sessiegegevens
@@ -34,6 +35,9 @@ if (isset($_SESSION['error'])) {
                 $_SESSION['user_name'] = $user['naam'];
                 $_SESSION['user_rol'] = $user['rol']; // Zorg dat deze kolom bestaat
 
+                echo "✅ Login succesvol!";
+                header("Location: ../admin/AdminPanel.html"); // Stuur naar homepage
+                exit;
                 // Redirect op basis van rol
                 if ($user['rol'] === 'admin') {
                     header("Location: ../admin/AdminPanel.html");
@@ -43,6 +47,10 @@ if (isset($_SESSION['error'])) {
                     exit;
                 }
             } else {
+                echo "❌ Fout: Ongeldig wachtwoord.";
+            }
+        } else {
+            echo "❌ Fout: Geen account gevonden met dit e-mailadres.";
                 // Wachtwoord fout
                 $_SESSION['error'] = "❌ Ongeldig wachtwoord.";
                 header("Location: login.php");
@@ -51,9 +59,9 @@ if (isset($_SESSION['error'])) {
             // Gebruiker niet gevonden
             $_SESSION['error'] = "❌ Geen account gevonden met dit e-mailadres.";
             header("Location: login.php");
-            exit;
         }
     } catch (PDOException $e) {
+        die("Fout bij login: " . $e->getMessage());
         // Databasefout
         $_SESSION['error'] = "❌ Fout bij login: " . $e->getMessage();
         header("Location: login.php");
