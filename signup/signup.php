@@ -14,7 +14,7 @@
             <h1><a href="../homepage/index.html">Apothecare</a></h1>
             <ul>
               <li><a href="../medicijnen/medicijnen.html">Medicijnen</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="../contact/contact.html">Contact</a></li>
               <li><a href="../about/overons.html">Over ons</a></li>
               <li><a href="../login/login.html">Login</a></li>
               <!-- <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> -->
